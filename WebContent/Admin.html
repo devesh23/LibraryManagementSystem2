@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Librarian</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+<link type="text/css" rel="stylesheet"
+	href="materialize/css/materialize.min.css" media="screen,projection" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link type="text/css" rel="stylesheet" href="custom.css">
+<!-- --------------------- -->
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.2.1.min.js">
+	
+</script>
+
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="index.js"></script>
+
+
+</head>
+<body>
+
+	<div class="row">
+		<div class="col s12">
+			<nav class="nav-extended">
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo">Optum Library</a> <a
+						href="#" data-activates="mobile-demo" class="button-collapse"><i
+						class="material-icons">Menu</i></a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a href="Logout.jsp">Log Out</a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="Logout.jsp">Log Out</a></li>
+					</ul>
+				</div>
+				
+				<div class="nav-content">
+					<ul class="tabs tabs-transparent">
+						<li class="tab"><a href="#AddLib">Add Librarian</a></li>
+						<li class="tab"><a href="#DeleteLib">Delete Librarian</a></li>
+					</ul>
+				</div>
+			</nav>
+			
+			
+		</div>
+	</div>
+	<div id="AddLib" class="col s12">
+		<div class="row"
+			style="height: 50%; width: 50%; top: 50%; left: 50%; z-index: 0px;">
+			<div class="col s12">
+				<form name="AddLibrarianForm" method="post"
+					action="addlibrarian.jsp">
+					<div class="form-container">
+						<h3 class="teal-text">Welcome Admin!</h3>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="Name" type="text" name="Name" class="validate" required>
+								<label for="Name">Name</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="Email" type="email" name="Email" class="validate" required>
+								<label for="Email">Email</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="PhoneNo" type="text" name="PhoneNo" class="validate" required>
+								<label for="PhoneNo">Mobile Number</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="UserName" type="text" name="UserName"
+									class="validate"> <label for="UserName" required>User
+									Name</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="PassWord" type="password" name="PassWord" required
+									class="validate"> <label for="PassWord">Password</label>
+							</div>
+						</div>
+						<center>
+							<button class="btn waves-effect waves-light teal" type="submit"
+								name="action">Add</button>
+						</center>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="DeleteLib" class="col s12">
+		<div class="row"
+			style="height: 50%; width: 50%; top: 50%; left: 50%; z-index: 0px;">
+			<div class="col s12">
+				<form name="DeleteLibrarianForm" method="post"
+					action="deletelibrarian.jsp">
+					<div class="form-container">
+						<h3 class="teal-text">Welcome Admin!</h3>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="UserName" type="text" name="UserName"
+									class="validate" required> <label for="UserName">User
+									Name</label>
+							</div>
+						</div>
+						<center>
+							<button class="btn waves-effect waves-light teal" type="submit"
+								name="action">Delete</button>
+						</center>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer id="footer"></footer>
+</body>
+</html>
